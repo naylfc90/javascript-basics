@@ -26,8 +26,9 @@ const addToArray = (element, array) => {
 
 const addToArray2 = (element, array) => {
   // your code here
-  array.push(element);
-  return array;
+  let newArray = [...array];
+  newArray.push(element);
+  return newArray;
 };
 
 const removeNthElement = (index, array) => {
@@ -76,6 +77,9 @@ const onlyEven = numbers => {
 
 const removeNthElement2 = (index, array) => {
   // your code here
+  let newArray = [...array];
+  newArray.splice(index, 1);
+  return newArray;
 };
 
 const elementsStartingWithAVowel = strings => {
@@ -89,6 +93,7 @@ const elementsStartingWithAVowel = strings => {
 
 const removeSpaces = string => {
   // your code here
+  return string.replace(/\s/g, '');
 };
 
 const sumNumbers = numbers => {
@@ -102,6 +107,19 @@ const sumNumbers = numbers => {
 
 const sortByLastLetter = strings => {
   // your code here
+  // iterate through strings arr and reverse
+  // sort string array
+  // iterate through again and reverse back
+  for (let x = 0; x < strings.length; x += 1) {
+    strings[x] = strings[x].split('').reverse().join('');
+  }
+  strings.sort();
+
+  for (let x = 0; x < strings.length; x += 1) {
+    strings[x] = strings[x].split('').reverse().join('');
+  }
+
+  return strings;
 };
 
 module.exports = {
