@@ -42,6 +42,7 @@ const getAges = people => {
 
 const findByName = (name, people) => {
   // your code here
+  
 };
 
 const findHondas = cars => {
@@ -50,14 +51,12 @@ const findHondas = cars => {
 
 const averageAge = people => {
   // your code here
-  // const result = people.map(a => a.age);
-  // let sum;
-  // for (let i = 0; i < result.length; i += 1) {
-  //   sum += result[i];
-  // }
-  // number: 
-  // number average = sum / result.length;
-  // return average;
+  // reduce method takes in total sum and next keyword which iterates through ages
+  // then takes average by dividing by people.length
+  const average = people.reduce((total, next) => 
+    total + next.age, 0) / people.length;
+
+  return average;
 };
 
 const createTalkingPerson = (name, age) => {
