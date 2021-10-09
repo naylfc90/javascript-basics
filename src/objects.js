@@ -42,11 +42,17 @@ const getAges = people => {
 
 const findByName = (name, people) => {
   // your code here
-  
+  let obj = people.find(obj => obj.name === name);
+  return obj;
 };
 
 const findHondas = cars => {
   // your code here
+  // returns Honda to result variable and then have to return the variable
+  const result = cars.filter(obj => {
+    return obj.manufacturer === 'Honda';
+  });
+  return result;
 };
 
 const averageAge = people => {
@@ -54,7 +60,7 @@ const averageAge = people => {
   // reduce method takes in total sum and next keyword which iterates through ages
   // then takes average by dividing by people.length
   const average = people.reduce((total, next) => 
-    total + next.age, 0) / people.length;
+      total + next.age, 0) / people.length;
 
   return average;
 };
