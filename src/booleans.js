@@ -5,18 +5,12 @@ const negate = a => {
 
 const both = (a, b) => {
   // your code here
-  if (a && b === true) {
-    return true;
-  }
-  return false;
+  return a && b;
 };
 
 const either = (a, b) => {
   // your code here
-  if (a || b === true) {
-    return true;
-  }
-  return false;
+  return a || b;
 };
 
 const none = (a, b) => {
@@ -37,50 +31,33 @@ const one = (a, b) => {
 
 const truthiness = a => {
   // your code here
-  if (a) {
-    return true;
-  }
-  return false;
+  // return the opposite, opposite of 'a'
+  return !!a;
 };
 
 const isEqual = (a, b) => {
   // your code here
-  if (a === b) {
-    return true;
-  }
-  return false;
+  return a === b;
 };
 
 const isGreaterThan = (a, b) => {
   // your code here
-  if (a > b) {
-    return true;
-  }
-  return false;
+  return a > b;
 };
 
 const isLessThanOrEqualTo = (a, b) => {
   // your code here
-  if (a <= b) {
-    return true;
-  }
-  return false;
+  return a <= b;
 };
 
 const isOdd = a => {
   // your code here
-  if (a % 2 > 0) {
-    return true;
-  }
-  return false;
+  return a % 2 > 0;
 };
 
 const isEven = a => {
   // your code here
-  if (a % 2 === 0) {
-    return true;
-  }
-  return false;
+  return a % 2 === 0;
 };
 
 const isSquare = a => {
@@ -91,10 +68,7 @@ const isSquare = a => {
 
 const startsWith = (char, string) => {
   // your code here
-  if (char === string.charAt(0)) {
-    return true;
-  }
-  return false;
+  return char === string.charAt(0);
 };
 
 const containsVowels = string => {
@@ -112,10 +86,7 @@ const containsVowels = string => {
 
 const isLowerCase = string => {
   // your code here
-  if (string.charAt(0) === string.charAt(0).toLowerCase()) {
-    return true;
-  }
-  return false;
+  return string.charAt(0) === string.charAt(0).toLowerCase();
 };
 
 module.exports = {

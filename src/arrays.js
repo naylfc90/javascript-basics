@@ -57,7 +57,7 @@ const uppercaseWordsInArray = strings => {
 const reverseWordsInArray = strings => {
   // your code here
   // code is splitting string after each letter, reversing and joining back together
-  for (let x = 0; x < strings.length; x+=1) {
+  for (let x = 0; x < strings.length; x += 1) {
     strings[x] = strings[x].split('').reverse().join('');
   }
   return strings;
