@@ -52,9 +52,6 @@ describe('addToArray', () => {
 
     expect(addToArray('a', array)).toEqual(['a']);
     expect(addToArray(4, array2)).toEqual([1, 2, 3, 4]);
-
-    // expect(array).toEqual(['a']);
-    // expect(array2).toEqual([1, 2, 3, 4]);
   });
 });
 
